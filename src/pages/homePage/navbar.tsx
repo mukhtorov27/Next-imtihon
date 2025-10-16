@@ -1,8 +1,8 @@
-import Image from "next/image"
+import Image from "next/image";
 
 function Navbar() {
   return (
-    <div>
+    <div className="flex">
       <Image src="/picnicLogo.png" alt="Logo" width={60} height={60} />
       <ul>
         <li>Bosh sahifa</li>
@@ -11,10 +11,15 @@ function Navbar() {
         <li>Blog</li>
       </ul>
       <div>
-        <input type="search" className="navInp" />
+        <input
+          type="search"
+          className="navInp"
+          placeholder="Search for products..."
+        />
+        <Image src={"/cart.svg"} alt="Cart" width={24} height={24} />
       </div>
     </div>
   );
 }
 
-export default Navbar
+export default Navbar;
