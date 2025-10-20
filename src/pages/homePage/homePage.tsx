@@ -2,8 +2,8 @@ import Image from "next/image";
 import "./homePage.css";
 function HomePage() {
   return (
-    <div className="mt-[147px]">
-      <div className="flex justify-center">
+    <div className="heroSection">
+      <div className="heroWrapper">
         <div className="heroContent">
           <h1 className="heroHeaderText">
             Zo&apos;r jihozlar bilan sarguzashtlarni kashf eting
@@ -14,7 +14,7 @@ function HomePage() {
             anjomlarigacha, hammasi sizning tajribangizni yuksaltirish uchun.
           </p>
           <button className="heroBtn">Xarid qiling</button>
-          <div className="ratingBox flex gap-5">
+          <div className="ratingBox">
             <div className="rating1">
               <h1 className="textH1">
                 200<span className="textSpan">+</span>
