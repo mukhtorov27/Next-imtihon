@@ -1,0 +1,98 @@
+.heroHeaderText {
+  width: 596px;
+  height: 170px;
+  opacity: 1;
+
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.heroText {
+  margin-top: 32px;
+  width: 545px;
+  height: 55px;
+  opacity: 1;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.heroBtn {
+  width: 210px;
+  height: 52px;
+  opacity: 1;
+  gap: 12px;
+  border-radius: 62px;
+  padding-top: 16px;
+  padding-right: 54px;
+  padding-bottom: 16px;
+  padding-left: 54px;
+  background: #245d30;
+  color: #fff;
+  margin-top: 32px;
+  cursor: pointer;
+}
+
+/* .heroContent {
+  position: relative;
+}
+
+.heroDecor {
+  position: relative;
+  width: 80px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.slanted-line {
+  display: block;
+  width: 2px;
+  height: 70px;
+  transform: rotate();
+  transform-origin: center;
+  box-shadow: 0 2px 6px rgba(36, 93, 48, 0.15);
+  border: 1px solid #0000001A
+}
+
+@media (max-width: 768px) {
+  .slanted-line {
+    display: none;
+  }
+  .heroDecor {
+    width: 0;
+  }
+}
+.ratingBox{
+    margin-top: 48px;
+}
+.textH1{
+    font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}
+.textSpan{
+color: #245D30;
+
+}
+.textP{
+    font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 22px;
+letter-spacing: 0%;
+color: #00000099;
+
+}

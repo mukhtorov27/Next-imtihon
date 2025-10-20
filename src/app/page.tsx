@@ -1,9 +1,9 @@
-import HomePage from "@/pages/homePage/homePage"
+import Navbar from "@/pages/navbar"
 
 function Home() {
   return (
     <div>
-      <HomePage/>
+      <Navbar/>
     </div>
   )
 }
