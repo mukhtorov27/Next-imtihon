@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./homePage.css";
+import CartsPage from "./carts";
 function HomePage() {
   return (
     <div className="heroSection">
@@ -46,6 +47,7 @@ function HomePage() {
           <Image src="/tent.png" alt="Hero Image" width={614} height={463} />
         </div>
       </div>
+      <CartsPage/>
     </div>
   );
 }

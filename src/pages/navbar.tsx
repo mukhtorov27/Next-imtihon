@@ -5,7 +5,15 @@ function Navbar() {
   return (
     <div>
       <div className="navbar">
-        <Image src="/picnicLogo.png" alt="Logo" width={60} height={60} />
+        <div className="logo">
+          <Image
+            src="/picnicLogo.png"
+            alt="Logo"
+            width={60}
+            height={60}
+            aria-label="Logo"
+          />
+        </div>
         <ul className="navLinks">
           <li>Bosh sahifa</li>
           <li>Mahsulotlar</li>
@@ -18,9 +26,26 @@ function Navbar() {
             className="navInp outline-0"
             placeholder="Search for products..."
           />
-          <button className="cursor-pointer">
-            <Image src={"/cart.svg"} alt="Cart" width={24} height={24} />
-          </button>
+          <div className="flex text-center searchBtn">
+            <button className="cursor-pointer">
+              <Image
+                src={"/searchButton.png"}
+                alt="Search"
+                width={24}
+                height={24}
+              />
+            </button>
+          </div>
+          <div className="flex text-center">
+            <button className="cursor-pointer">
+              <Image src={"/cart.svg"} alt="Cart" width={24} height={24} />
+            </button>
+          </div>
+          <div className="flex text-center menuButton">
+            <button className="cursor-pointer">
+              <Image src={"/menu.png"} alt="User" width={24} height={24} />
+            </button>
+          </div>
         </div>
       </div>
 
