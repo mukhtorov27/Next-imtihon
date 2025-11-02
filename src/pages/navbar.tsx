@@ -1,5 +1,6 @@
 import Image from "next/image";
-import HomePage from "./homePage/homePage";
+// import HomePage from "./homePage/homePage";
+// import Footer from "./footer";
 
 function Navbar() {
   return (
@@ -49,7 +50,9 @@ function Navbar() {
         </div>
       </div>
 
-      <HomePage />
+      <div style={{ paddingTop: '64px' }}>
+        {/* <HomePage /> */}
+      </div>
     </div>
   );
 }

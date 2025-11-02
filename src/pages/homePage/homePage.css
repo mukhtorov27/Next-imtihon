@@ -308,3 +308,307 @@
   line-height: 100%;
   letter-spacing: 0%;
 }
+
+.left-side-img {
+  display: flex;
+  gap: 18px;
+}
+.product-h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.product-p1 {
+  font-family: Satoshi;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  margin-bottom: 43px;
+}
+.product-desc-p {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.product-desc-span {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.product-desc {
+  width: 612px;
+  height: 180px;
+}
+.product-number-buttons {
+  width: 193px;
+  height: 52px;
+  background-color: #f0f0f0;
+  justify-content: space-between;
+  opacity: 1;
+  border-radius: 62px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+}
+.product-add-button {
+  width: 400px;
+  height: 52px;
+  opacity: 1;
+  gap: 12px;
+  border-radius: 62px;
+  padding-top: 16px;
+  padding-right: 54px;
+  padding-bottom: 16px;
+  padding-left: 54px;
+  background: #245d30;
+  color: white;
+}
+.product-buttons {
+  display: flex;
+  gap: 19px;
+  margin-top: 75px;
+}
+.product-box {
+  display: flex;
+  gap: 46px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product-desc-mt {
+  margin-top: 19px;
+}
+.product-rating {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+.footer-top {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.footer {
+  width: 100%;
+  background: #245d30;
+}
+.footer-col h4 {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+}
+.footer-col li {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0px;
+  color: #ffffff99;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer {
+  padding: 78px 100px 100px 101px;
+}
+.footer-col li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+.savath1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.savat-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+.aloqaImg {
+  width: 100%;
+  height: 466px;
+  background-image: url("/aloqaImg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 199px 0 199px 100px;
+}
+.aloqah1 {
+  font-family: Open Sans;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #fff;
+}
+@media (max-width: 402px) {
+  .aloqaImg {
+    display: flex;
+    width: 402px;
+    height: 309px;
+    background-size: cover;
+    background-position: center;
+    justify-self: center;
+  }
+}
+@media (max-width: 600px) {
+  .aloqah1 {
+    display: none;
+  }
+}
+.aloqaText1 {
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 400px;
+  margin-bottom: 28px;
+  color: #011334;
+}
+.aloqaText2 {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #011334;
+  margin-bottom: 31px;
+  width: 330px;
+}
+.aloqa-data {
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #011334;
+}
+.aloqa-input-1 {
+  width: 222px !important;
+  height: 50px;
+  all: unset;
+  border: 1px solid #828282;
+  border-radius: 10px;
+  padding: 12px 0 13px 20px;
+}
+.aloqa-input-1:focus{
+  all: unset;
+border: 1px solid #245D30;
+border-radius: 10px;
+  padding: 12px 0 13px 20px;
+}
+.aloqa-input-2{
+  width: 465px;
+  height: 50px;
+  all: unset;
+  border: 1px solid #828282;
+  border-radius: 10px;
+  padding: 12px 0 13px 20px;
+}
+.aloqa-input-2:focus{
+  all: unset;
+border: 1px solid #245D30;
+border-radius: 10px;
+  padding: 12px 0 13px 20px;
+}
+.aloqa-input-pasti{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.aloqa-textarea{
+  all: unset;
+  box-sizing: border-box;
+  border: 1px #828282 solid;
+  border-radius: 10px;
+  padding: 20px 0 95px 20px;
+  resize: vertical;         
+  overflow: auto;
+  white-space: pre-wrap;       
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.aloqa-btn{
+  width: 465px;
+height: 45px;
+opacity: 1;
+gap: 10px;
+padding-top: 12px;
+padding-right: 120px;
+padding-bottom: 12px;
+padding-left: 120px;
+border-radius: 20px;
+background: linear-gradient(0deg, #245D30, #245D30);
+color: #fff;
+margin-top: 40px;
+}
+.card{
+  width: 565px;
+height: 535px;
+opacity: 1;
+gap: 10px;
+border-radius: 30px;
+border-width: 1px;
+padding: 50px;
+}
+@media(max-width:1200px){
+  .aloqa-data-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media(max-width:600px){
+  .card{
+    width: 370px;
+    height: 534px;
+  }
+}

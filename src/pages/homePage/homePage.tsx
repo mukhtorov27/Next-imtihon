@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "./homePage.css";
 import CartsPage from "./carts";
+// import Footer from "./footer";
 function HomePage() {
   return (
     <div className="heroSection">
@@ -48,6 +49,7 @@ function HomePage() {
         </div>
       </div>
       <CartsPage/>
+      {/* <Footer/> */}
     </div>
   );
 }

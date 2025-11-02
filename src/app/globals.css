@@ -1,4 +1,6 @@
+/* Tailwind v4 usage: import Preflight and utilities */
 @import "tailwindcss";
+
 .navInp {
   width: 278px;
   height: 38px;

@@ -1,9 +1,10 @@
 import Image from "next/image";
+import AccordionPage from "./accordion";
 
 function CartsPage() {
   return (
-    <div className="cartBox">
-      <div className="carts">
+    <div className="cartBox mb-32">
+      <div className="carts justify-center">
         <div className="cartSection">
           <div className="cartImg">
             <Image
@@ -332,6 +333,7 @@ function CartsPage() {
         {/* new comment */}
       </div>
       <button className="seeAllBtn">Hammasini ko‘rish</button>
+      <AccordionPage />
     </div>
   );
 }
