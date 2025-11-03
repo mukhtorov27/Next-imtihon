@@ -1,8 +1,12 @@
+"use client"
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 // import HomePage from "./homePage/homePage";
 // import Footer from "./footer";
 
 function Navbar() {
+  const [underline,setUnderline]=useState(0)
   return (
     <div>
       <div className="navbar">
@@ -16,10 +20,58 @@ function Navbar() {
           />
         </div>
         <ul className="navLinks">
-          <li>Bosh sahifa</li>
-          <li>Mahsulotlar</li>
-          <li>Aloqa</li>
-          <li>Blog</li>
+          <li>
+            <Link
+              onClick={() => {
+                setUnderline(0);
+              }}
+              href="/homePage"
+              style={{
+                textDecoration: `${underline === 0 ? "underline" : "none"}`,
+              }}
+            >
+              Bosh sahifa
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => {
+                setUnderline(1);
+              }}
+              href="/products"
+              style={{
+                textDecoration: `${underline === 1 ? "underline" : "none"}`,
+              }}
+            >
+              Mahsulotlar
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => {
+                setUnderline(2);
+              }}
+              href="/aloqa"
+              style={{
+                textDecoration: `${underline === 2 ? "underline" : "none"}`,
+              }}
+            >
+              Aloqa
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => {
+                setUnderline(3);
+              }}
+              href="/blog"
+              style={{
+                textDecoration: `${underline === 3 ? "underline" : "none"}`,
+              }}
+            >
+              Blog
+            </Link>
+          </li>
         </ul>
         <div className="searchDiv">
           <input
@@ -50,9 +102,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div style={{ paddingTop: '64px' }}>
-        {/* <HomePage /> */}
-      </div>
+      <div style={{ paddingTop: "64px" }}>{/* <HomePage /> */}</div>
     </div>
   );
 }

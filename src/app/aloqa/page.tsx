@@ -66,7 +66,7 @@ function Aloqa() {
           </div>
         </div>
         <form action="#" className="card" onSubmit={(e) => handleSubmit(e)}>
-          <div className="flex gap-5">
+          <div className="aloqa-first-inp-section">
             <input
               type="text"
               className="aloqa-inp aloqa-input-1"

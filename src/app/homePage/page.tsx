@@ -1,6 +1,6 @@
 import Image from "next/image";
-import "./homePage.css";
-import CartsPage from "./carts";
+import "../homePage.css";
+import CartsPage from "../carts/page";
 // import Footer from "./footer";
 function HomePage() {
   return (
@@ -48,7 +48,8 @@ function HomePage() {
           <Image src="/tent.png" alt="Hero Image" width={614} height={463} />
         </div>
       </div>
-      <CartsPage/>
+      <CartsPage />
+      <button className="seeAllBtn">Hammasini ko‘rish</button>
       {/* <Footer/> */}
     </div>
   );

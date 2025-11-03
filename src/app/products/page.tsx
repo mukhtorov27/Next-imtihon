@@ -1,5 +1,6 @@
 import Image from "next/image";
-import AccordionPage from "./accordion";
+import AccordionPage from "../../pages/homePage/accordion";
+import Link from "next/link";
 
 function CartsPage() {
   return (
@@ -332,7 +333,7 @@ function CartsPage() {
         </div>
         {/* new comment */}
       </div>
-      <button className="seeAllBtn">Hammasini ko‘rish</button>
+     <Link href='/products'> <button className="seeAllBtn">Hammasini ko‘rish</button></Link>
       <AccordionPage />
     </div>
   );
