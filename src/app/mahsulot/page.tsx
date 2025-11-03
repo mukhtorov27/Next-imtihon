@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import "./homePage.css";
+import "../homePage.css";
 function Mahsulot() {
   return (
     <div>
@@ -55,7 +55,6 @@ function Mahsulot() {
         </div>
         <div>
           <h1 className="product-h1">Katta va Qulay Sayohat Chodiri</h1>
-          <p className="product-rating">rating</p>
           <p className="product-p1 flex gap-3 items-center">
             $260 <span className="line-through text-gray-400">$300</span>
             <Image src="/skidka.png" alt="skidka" width={72} height={34} />

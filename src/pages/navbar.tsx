@@ -96,7 +96,9 @@ function Navbar() {
           </div>
           <div className="flex text-center menuButton">
             <button className="cursor-pointer">
-              <Image src={"/menu.png"} alt="User" width={24} height={24} />
+              <Link href="/savat">
+                <Image src={"/menu.png"} alt="User" width={24} height={24} />
+              </Link>
             </button>
           </div>
         </div>
