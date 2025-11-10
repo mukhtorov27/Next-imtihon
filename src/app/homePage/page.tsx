@@ -2,6 +2,7 @@ import Image from "next/image";
 import "../homePage.css";
 import CartsPage from "../carts/page";
 import Link from "next/link";
+import AccordionPage from "@/pages/homePage/accordion";
 // import Footer from "./footer";
 function HomePage() {
   return (
@@ -16,7 +17,9 @@ function HomePage() {
             jihozlarimizni kashf eting. Yuqori sifatli chodirlardan qulay lager
             anjomlarigacha, hammasi sizning tajribangizni yuksaltirish uchun.
           </p>
-          <button className="heroBtn"><Link href="/products">Xarid qiling</Link></button>
+          <button className="heroBtn">
+            <Link href="/products">Xarid qiling</Link>
+          </button>
           <div className="ratingBox">
             <div className="rating1">
               <h1 className="textH1">
@@ -50,7 +53,20 @@ function HomePage() {
         </div>
       </div>
       <CartsPage />
-      <button className="seeAllBtn"><Link href='/products'>Hammasini ko‘rish</Link></button>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "2rem",
+          marginBottom: "2rem",
+        }}
+      >
+        <button className="seeAllBtn">
+          <Link href="/products">Hammasini kurish</Link>
+        </button>
+      </div>
+      <AccordionPage />
       {/* <Footer/> */}
     </div>
   );

@@ -1,16 +1,25 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import AccordionPage from "../../pages/homePage/accordion";
+import Link from "next/link";
 import { db } from "@/app/firebase/firebase.config";
 import { collection, getDocs } from "firebase/firestore";
+import "../homePage.css";
 
 interface Product {
   id: string;
   name?: string;
   price?: number;
   description?: string;
-  img?: string[]; 
+  img?: string[];
+}
+
+interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
 }
 
 export default function CartsPage() {
@@ -37,6 +46,35 @@ export default function CartsPage() {
     fetchProducts();
   }, []);
 
+  const addToCart = (e: React.MouseEvent, product: Product) => {
+    e.preventDefault();
+
+    const cartItem: CartItem = {
+      id: product.id,
+      name: product.name || "No name",
+      price: product.price || 0,
+      quantity: 1,
+      image: product.img && product.img.length ? product.img[0] : "/tent1.png",
+    };
+
+    const existingCart = JSON.parse(
+      localStorage.getItem("cart") || "[]"
+    ) as CartItem[];
+
+    const existingItemIndex = existingCart.findIndex(
+      (item) => item.id === product.id
+    );
+
+    if (existingItemIndex > -1) {
+      existingCart[existingItemIndex].quantity += 1;
+    } else {
+      existingCart.push(cartItem);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(existingCart));
+    alert("Mahsulot savatga qo'shildi!");
+  };
+
   return (
     <div className="cartBox mb-32">
       <div className="carts justify-center">
@@ -46,7 +84,16 @@ export default function CartsPage() {
           <div className="empty">No products found</div>
         ) : (
           products.map((product) => (
-            <div key={product.id} className="cartSection">
+            <Link
+              key={product.id}
+              href={`/mahsulot/${product.id}`}
+              className="cartSection"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                cursor: "pointer",
+              }}
+            >
               <div className="cartImg">
                 <Image
                   src={
@@ -66,7 +113,11 @@ export default function CartsPage() {
               <div className="cartAddSection">
                 <span>${product.price ?? "—"}</span>
                 <div>
-                  <button>
+                  <button
+                    aria-label="add-to-cart"
+                    onClick={(e) => addToCart(e, product)}
+                    className="cart-add-btn"
+                  >
                     <Image
                       src="/cartAdd.svg"
                       alt="Add to Cart"
@@ -76,12 +127,10 @@ export default function CartsPage() {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))
         )}
       </div>
-
-      <AccordionPage />
     </div>
   );
 }

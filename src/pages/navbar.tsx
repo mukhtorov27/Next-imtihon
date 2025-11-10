@@ -1,12 +1,21 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-// import HomePage from "./homePage/homePage";
-// import Footer from "./footer";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
-  const [underline,setUnderline]=useState(0)
+  const [underline, setUnderline] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/products?search=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
+
   return (
     <div>
       <div className="navbar">
@@ -74,24 +83,30 @@ function Navbar() {
           </li>
         </ul>
         <div className="searchDiv">
-          <input
-            type="search"
-            className="navInp outline-0"
-            placeholder="Search for products..."
-          />
-          <div className="flex text-center searchBtn">
-            <button className="cursor-pointer">
-              <Image
-                src={"/searchButton.png"}
-                alt="Search"
-                width={24}
-                height={24}
-              />
-            </button>
-          </div>
+          <form onSubmit={handleSearch} className="flex items-center">
+            <input
+              type="search"
+              className="navInp outline-0"
+              placeholder="Search for products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <div className="flex text-center searchBtn">
+              <button type="submit" className="cursor-pointer">
+                <Image
+                  src={"/searchButton.png"}
+                  alt="Search"
+                  width={24}
+                  height={24}
+                />
+              </button>
+            </div>
+          </form>
           <div className="flex text-center">
             <button className="cursor-pointer">
-              <Image src={"/cart.svg"} alt="Cart" width={24} height={24} />
+              <Link href="/savat">
+                <Image src={"/cart.svg"} alt="Cart" width={24} height={24} />
+              </Link>
             </button>
           </div>
           <div className="flex text-center menuButton">
